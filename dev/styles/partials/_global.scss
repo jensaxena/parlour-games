@@ -1,0 +1,86 @@
+/* STYLES */
+$baseFont: serif;
+$displayFont: 'UnifrakturCook', sans-serif;
+
+$hugeType: calc(4.5rem + (100 - 4.5) * ((100vw - 300px) / (1500 - 320)));
+$largeType: calc(1.9rem + (2.4 - 1.9) * ((100vw - 300px) / (1500 - 320)));
+$medType: calc(1.8rem + (2.4 - 1.8) * ((100vw - 300px) / (1500 - 320)));
+
+html {
+  font-size: 62.5%;
+  line-height: 1;
+}
+
+body {
+  background:  url('../images/bg-endpapers-colour-1500x750.jpg') no-repeat top center / cover;
+  font-size: $medType;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 1rem;
+  min-height: calc(100vh - 2rem);
+  min-width: 300px;
+  position: relative;
+}
+
+h1 {
+  color: darken(maroon, 15%);
+  font-family: $displayFont;
+  font-size: $hugeType;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2vh 0;
+  text-align: center;
+  text-indent: -5vw;
+  text-shadow: 0 0 2px maroon;
+  word-spacing: 5vw;
+}
+
+main {
+  display: grid;
+  grid-gap: 1vh;
+  grid-auto-rows: minmax(2rem, auto);
+}
+figure {
+  background: linear-gradient(to bottom, rgba(245,222,179,0.75), rgba(128,0,0,0.5));
+  border-radius: 10px;
+  margin: 1rem;
+  max-width: 500px;
+  min-width: 250px;
+  padding: 1rem;
+  img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    float: left;
+    margin-right: 2rem;
+  }
+  figcaption {
+    font-family: $displayFont;
+  }
+  h2 {
+    color: darken(brown, 35%);
+    font-size: $largeType;
+    margin: 0 0 0.5rem;
+  }
+}
+
+p {
+  color: darken(brown, 35%);
+  font-family: $baseFont;
+  line-height: 1.25;
+  margin: 0;
+}
+
+footer {
+  text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background: url('../images/bg-endpapers-colour-600x900.jpg') no-repeat top center / cover;
+  }
+}
